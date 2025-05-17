@@ -1,0 +1,17 @@
+{
+  "name": "OH, GO!",
+  "short_name": "OH, GO!",
+  "description": "devPark - Frontend Developer",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "/icons/pwa-icons/icon-logo-pwa.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
