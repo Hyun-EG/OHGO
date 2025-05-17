@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import SplashProvider from "./(components)/splash_screen/_components/SplashProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,7 +31,7 @@ export default function RootLayout({
         <link rel="icon" href="/icons/pwa-icons/icon-logo-pwa.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <SplashProvider>{children}</SplashProvider>
       </body>
     </html>
   );
