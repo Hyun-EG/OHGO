@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import p_json from "@/package.json";
 
 const SplashScreen = () => {
