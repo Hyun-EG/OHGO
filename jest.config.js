@@ -1,8 +1,9 @@
-import { createDefaultPreset } from "ts-jest";
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const { createDefaultPreset } = require("ts-jest");
 
 const tsJestTransformCfg = createDefaultPreset().transform;
 
-/** @type {import("jest").Config} **/
+/** @type {import("jest").Config} */
 module.exports = {
   testEnvironment: "jsdom",
   transform: {
