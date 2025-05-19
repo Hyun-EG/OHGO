@@ -1,5 +1,7 @@
-const Home = () => {
-  return <div className="text-red-500">dd</div>;
+import Home from "./(pages)/home/Home";
+
+const HomePage = () => {
+  return <Home />;
 };
 
-export default Home;
+export default HomePage;

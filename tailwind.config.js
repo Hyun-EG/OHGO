@@ -6,7 +6,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "custom-border-grey": "#bebebe",
+        "custom-blue": "#038FEF",
+        "custom-orange": "#038FEF",
+        "custom-emerald": "#038FEF",
+        "custom-red": "#038FEF",
+      },
+    },
   },
   plugins: [],
 };
