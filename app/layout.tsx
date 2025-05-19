@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import SplashProvider from "./(components)/splash_screen/_components/SplashProvider";
 import "./globals.css";
+import Nav from "./(components)/nav/Nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,10 +14,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "OH, GO!",
   description: "...",
-  themeColor: "#ffffff",
   manifest: "/manifest.json",
 };
 
@@ -31,7 +37,10 @@ export default function RootLayout({
         <link rel="icon" href="/icons/pwa-icons/icon-logo-pwa.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <SplashProvider>{children}</SplashProvider>
+        <SplashProvider>
+          <Nav />
+          {children}
+        </SplashProvider>
       </body>
     </html>
   );

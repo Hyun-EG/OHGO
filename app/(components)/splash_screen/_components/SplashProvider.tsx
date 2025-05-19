@@ -8,13 +8,14 @@ export default function SplashProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState<null | boolean>(null);
 
   useEffect(() => {
     const seen = sessionStorage.getItem("seenSplash");
     if (seen) {
       setShowSplash(false);
     } else {
+      setShowSplash(true);
       const timer = setTimeout(() => {
         sessionStorage.setItem("seenSplash", "true");
         setShowSplash(false);
@@ -23,6 +24,7 @@ export default function SplashProvider({
     }
   }, []);
 
+  if (showSplash === null) return null;
   if (showSplash) return <SplashScreen />;
   return <>{children}</>;
 }
